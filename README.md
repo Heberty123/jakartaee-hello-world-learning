@@ -23,3 +23,41 @@ docker run -it --rm -p 8080:8080 jakartaee-hello-world:v1
 ```
 
 Once the runtime starts, you can access the project at http://localhost:8080/jakartaee-hello-world.
+
+
+## Wildfly Maven Plugin
+
+```
+
+* mvn wildfly:deploy
+
+    > The wildfly:deploy goal deploys the application to the running WildFly Application Server
+
+* mvn wildfly:deploy-artifact
+
+    > The wildfly:deploy-artifact goal deploys an arbitrary artifact to the running WildFly.
+
+* mvn wildfly:dev 
+
+    > The wildfly:dev goal will start WildFly and deploy your application. If the jboss-home property is not set, a server will be provisioned. The source directories will be watched for changes. If a change occurs, additional Maven goals may be executed before a possible redeploy of your deployment.
+
+* mvn wildfly:redeploy
+
+    > The wildfly:redeploy goal will redeploy your application if and only if the application has already been deployed to the application server.
+
+* mvn wildfly:undeploy
+
+    > The wildfly:undeploy goal will undeploy your application from the from the running application server if the application has already been deployed.
+
+* mvn wildfly:run
+
+    > The wildfly:run goal will run WildFly and deploy your application. If the jboss-home property is not set, a server will be provisioned.
+
+* mvn wildfly:start
+
+    > The wildfly:start goal will start a WildFly. If the jboss-home property is not set, a server will be provisioned. The server will continue to run until the shutdown goal is executed, a shutdown management operation has been issued or the process is killed.
+
+* mvn wildfly:shutdown
+
+    > The wildfly:shutdown goal will shutdown a running WildFly.
+```
